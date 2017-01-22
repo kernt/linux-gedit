@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="puppet">
+  <snippet>
+    <text><![CDATA[${1:key} => ${2:attribute},]]></text>
+    <description>add</description>
+    <tag>&gt;</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[alert("${1:message}")${2}]]></text>
+    <description>alert</description>
+    <tag>pp_alert</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[? {
+		'${1}'	=> ${2}
+}]]></text>
+    <description>?</description>
+    <tag>pp_quest</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[case $${1:variable} {
+		default: { ${2} }
+}]]></text>
+    <description>case</description>
+    <tag>pp_case</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[# Module:: ${1:modulename}
+# Class: ${2:classname}
+#
+# ${3:description}
+#
+# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
+# Date:: `system("ruby -e 'puts Time.now'")`
+#
+class $1::$2
+{
+	
+}]]></text>
+    <description>class</description>
+    <tag>pp_class</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[crit("${1:message}")${2}]]></text>
+    <description>crit</description>
+    <tag>pp_crit</tag>
+  </snippet>
+  <snippet>
+    <description>cron</description>
+    <tag>pp_cron</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[debug("${1:message}")${2}]]></text>
+    <description>debug</description>
+    <tag>pp_debug</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[define ${1:defname}(${2:args}) {
+	  ${3:#code}
+} # Define: $1]]></text>
+    <description>def</description>
+    <tag>pp_def</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[defined(${1:Resource}["${2:name}"])${3}]]></text>
+    <description>defined</description>
+    <tag>pp_defined</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if $${1:variable} {
+		${2}
+} ]]></text>
+    <description>else</description>
+    <tag>pp_else</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[emerg("${1:message}")${2}]]></text>
+    <description>emerg</description>
+    <tag>pp_emerg</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[exec {
+	  "${1:name}":
+	    command     => '${2:command}',
+	    refreshonly => '${3:true}',
+	    onlyif      => '${4:run_if_true}',
+	    unless      => '${5:run_if_false}',
+}]]></text>
+    <description>exec</description>
+    <tag>pp_exec</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[fail("${1:message}")${2}]]></text>
+    <description>fail</description>
+    <tag>pp_fail</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file {
+	  "${1:filename}":
+	    ensure => '${3:file}',
+	    source => 'puppet:///${2:source}',
+	    owner  => '${4:root}',
+	    group  => '${5:root}',
+	    mode   => '${6:0755}',
+}]]></text>
+    <description>file</description>
+    <tag>pp_file</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[group{"${1:group}":
+		ensure	=> ${2:present}
+}]]></text>
+    <description>group</description>
+    <tag>pp_group</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[# == Class ${1:classname}
+#
+# ${2:Everything required to run Puppet automatically on a client.}
+#
+# === Parameters
+# ${3:No parameters.}
+#
+# === Variables
+#
+# ${4:No variables used.}
+#
+# === Defaults
+#
+# ${5:No variables used.}
+# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
+# Date:: `system("ruby -e 'puts Time.now'")`
+#]]></text>
+    <description>head</description>
+    <tag>pp_head</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[host{"${1:hostname}":
+		ip	=> ${2:127.0.0.1}
+}]]></text>
+    <description>host</description>
+    <tag>pp_host</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if $${1:variable} {
+		${2}
+	} else {
+		${3}
+}]]></text>
+    <description>if</description>
+    <tag>pp_if</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if $${1:variable} {
+		${2}
+	} else {
+		${3}
+}]]></text>
+    <description>ifelse</description>
+    <tag>pp_ifelse</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[include ${1:classname}${2}]]></text>
+    <description>include</description>
+    <tag>pp_inc</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[info("${1:message}")${2}]]></text>
+    <description>info</description>
+    <tag>pp_info</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[inline_template("<%= ${1} %>")${2}]]></text>
+    <description>inline_template</description>
+    <tag>pp_tpl</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[mailalias{"${1:localpart}":
+		recipient	=> "${2:recipient}"
+}]]></text>
+    <description>mailalias</description>
+    <tag>pp_mailalias</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[mount{"${1:destination path}":
+		ensure	=> ${2:mounted},
+		device	=> "${3:device name or path}"
+}]]></text>
+    <description>mount</description>
+    <tag>pp_mount</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[node "${1:`Filename('', 'fqdn')`}" {
+		${2}
+}]]></text>
+    <description>node</description>
+    <tag>pp_node</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[notice("${1:message}")${2}]]></text>
+    <description>notice</description>
+    <tag>pp_notice</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[package {
+	  "${1:package_name}":
+	    ensure   => '${2:installed}',
+}]]></text>
+    <description>package</description>
+    <tag>pp_package</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA["puppet://puppet/${1:module name}/${2:file name}"]]></text>
+    <description>puppetsource</description>
+    <tag>pp_puppet</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[realize(${1:Resource}[${2:name}])${3}]]></text>
+    <description>realize</description>
+    <tag>pp_realize</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[regsubst(${1:hay stack}, ${2:needle}, "${3:replacement}")${4}]]></text>
+    <description>regsubst</description>
+    <tag>pp_regsubst</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[service {
+	  "${1:service_name}":
+	    ensure   => '${2:running}',
+	    enable   => '${3:true}',
+}]]></text>
+    <description>service</description>
+    <tag>pp_service</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[split(${1:hay stack}, "${2:patten}")${3}]]></text>
+    <description>split</description>
+    <tag>pp_split</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[user{"${1:user}":
+		comment		=> '${2:$1}',
+		ensure		=> 'present',
+		managehome	=> 'true',
+		home		=> "${3:/home/$1}"
+}]]></text>
+    <description>user</description>
+    <tag>pp_user</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[versioncmp("${1:version}", "${2:version}")${3}]]></text>
+    <description>versioncmp</description>
+    <tag>pp_version</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[warning("${1:message}")${2}]]></text>
+    <description>warning</description>
+    <tag>pp_warning</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[${1:key} => ${2:attribute},]]></text>
+    <description>add</description>
+    <tag>&gt;</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[alert("${1:message}")${2}]]></text>
+    <description>alert</description>
+    <tag>pp_alert</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[? {
+		'${1}'	=> ${2}
+}]]></text>
+    <description>?</description>
+    <tag>pp_quest</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[case $${1:variable} {
+		default: { ${2} }
+}]]></text>
+    <description>case</description>
+    <tag>pp_case</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[# Module:: ${1:modulename}
+# Class: ${2:classname}
+#
+# ${3:description}
+#
+# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
+# Date:: `system("ruby -e 'puts Time.now'")`
+#
+class $1::$2
+{
+	
+}]]></text>
+    <description>class</description>
+    <tag>pp_class</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[crit("${1:message}")${2}]]></text>
+    <description>crit</description>
+    <tag>pp_crit</tag>
+  </snippet>
+  <snippet>
+    <description>cron</description>
+    <tag>pp_cron</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[debug("${1:message}")${2}]]></text>
+    <description>debug</description>
+    <tag>pp_debug</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[define ${1:defname}(${2:args}) {
+	  ${3:#code}
+} # Define: $1]]></text>
+    <description>def</description>
+    <tag>pp_def</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[defined(${1:Resource}["${2:name}"])${3}]]></text>
+    <description>defined</description>
+    <tag>pp_defined</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if $${1:variable} {
+		${2}
+} ]]></text>
+    <description>else</description>
+    <tag>pp_else</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[emerg("${1:message}")${2}]]></text>
+    <description>emerg</description>
+    <tag>pp_emerg</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[exec {
+	  "${1:name}":
+	    command     => '${2:command}',
+	    refreshonly => '${3:true}',
+	    onlyif      => '${4:run_if_true}',
+	    unless      => '${5:run_if_false}',
+}]]></text>
+    <description>exec</description>
+    <tag>pp_exec</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[fail("${1:message}")${2}]]></text>
+    <description>fail</description>
+    <tag>pp_fail</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[file {
+	  "${1:filename}":
+	    ensure => '${3:file}',
+	    source => 'puppet:///${2:source}',
+	    owner  => '${4:root}',
+	    group  => '${5:root}',
+	    mode   => '${6:0755}',
+}]]></text>
+    <description>file</description>
+    <tag>pp_file</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[group{"${1:group}":
+		ensure	=> ${2:present}
+}]]></text>
+    <description>group</description>
+    <tag>pp_group</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[# == Class ${1:classname}
+#
+# ${2:Everything required to run Puppet automatically on a client.}
+#
+# === Parameters
+# ${3:No parameters.}
+#
+# === Variables
+#
+# ${4:No variables used.}
+#
+# === Defaults
+#
+# ${5:No variables used.}
+# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
+# Date:: `system("ruby -e 'puts Time.now'")`
+#]]></text>
+    <description>head</description>
+    <tag>pp_head</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[host{"${1:hostname}":
+		ip	=> ${2:127.0.0.1}
+}]]></text>
+    <description>host</description>
+    <tag>pp_host</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if $${1:variable} {
+		${2}
+	} else {
+		${3}
+}]]></text>
+    <description>if</description>
+    <tag>pp_if</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if $${1:variable} {
+		${2}
+	} else {
+		${3}
+}]]></text>
+    <description>ifelse</description>
+    <tag>pp_ifelse</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[include ${1:classname}${2}]]></text>
+    <description>include</description>
+    <tag>pp_inc</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[info("${1:message}")${2}]]></text>
+    <description>info</description>
+    <tag>pp_info</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[inline_template("<%= ${1} %>")${2}]]></text>
+    <description>inline_template</description>
+    <tag>pp_tpl</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[mailalias{"${1:localpart}":
+		recipient	=> "${2:recipient}"
+}]]></text>
+    <description>mailalias</description>
+    <tag>pp_mailalias</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[mount{"${1:destination path}":
+		ensure	=> ${2:mounted},
+		device	=> "${3:device name or path}"
+}]]></text>
+    <description>mount</description>
+    <tag>pp_mount</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[node "${1:`Filename('', 'fqdn')`}" {
+		${2}
+}]]></text>
+    <description>node</description>
+    <tag>pp_node</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[notice("${1:message}")${2}]]></text>
+    <description>notice</description>
+    <tag>pp_notice</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[package {
+	  "${1:package_name}":
+	    ensure   => '${2:installed}',
+}]]></text>
+    <description>package</description>
+    <tag>pp_package</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA["puppet://puppet/${1:module name}/${2:file name}"]]></text>
+    <description>puppetsource</description>
+    <tag>pp_puppet</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[realize(${1:Resource}[${2:name}])${3}]]></text>
+    <description>realize</description>
+    <tag>pp_realize</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[regsubst(${1:hay stack}, ${2:needle}, "${3:replacement}")${4}]]></text>
+    <description>regsubst</description>
+    <tag>pp_regsubst</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[service {
+	  "${1:service_name}":
+	    ensure   => '${2:running}',
+	    enable   => '${3:true}',
+}]]></text>
+    <description>service</description>
+    <tag>pp_service</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[split(${1:hay stack}, "${2:patten}")${3}]]></text>
+    <description>split</description>
+    <tag>pp_split</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[user{"${1:user}":
+		comment		=> '${2:$1}',
+		ensure		=> 'present',
+		managehome	=> 'true',
+		home		=> "${3:/home/$1}"
+}]]></text>
+    <description>user</description>
+    <tag>pp_user</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[versioncmp("${1:version}", "${2:version}")${3}]]></text>
+    <description>versioncmp</description>
+    <tag>pp_version</tag>
+  </snippet>
+  <snippet>
+    <text><![CDATA[warning("${1:message}")${2}]]></text>
+    <description>warning</description>
+    <tag>pp_warning</tag>
+  </snippet>
+</snippets>
