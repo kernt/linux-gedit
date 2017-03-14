@@ -1,0 +1,49 @@
+<style-scheme name="Darkermate-tkern" id="darkermate-tkern" version="1.0">
+  <author>Tobias kern</author>
+  <description>tkern-darkermate</description>
+
+  <style name="text"	foreground="#eeeeee" background="#121212" />
+  <style name="selection"	background="#555753" />
+  <style name="selection-unfocused"	foreground="#eeeeee" background="#bbbbbb" />
+  <style name="cursor"	foreground="#2e3436" />
+  <style name="secondary-cursor"	foreground="#ff79d9" />
+  <style name="line-numbers"	foreground="#555753" background="#bbbbbb" />
+  <style name="bracket-match"	foreground="#888a85" background="#2e3436" bold="true" />
+  <style name="bracket-mismatch"	foreground="#eeeeee" background="#888a85" bold="true" />
+  <style name="search-match"	foreground="#121212" background="#fce94f" />
+  <style name="def:keyword"	foreground="#ff9900" background="#2e3436" bold="true" />
+  <style name="def:statement"	foreground="#00c99b" />
+  <style name="def:function"	foreground="#9e91ff" />
+  <style name="def:preprocessor"	foreground="#eeeeee" bold="true" />
+  <style name="def:type"	foreground="#009cff" />
+  <style name="def:character"	foreground="#ce5c00" />
+  <style name="def:comment"	foreground="#d3d7cf" />
+  <style name="def:number"	foreground="#00c99b" />
+  <style name="def:string"	foreground="#96ff00" />
+  <style name="def:net-address-in-comment"	foreground="#9e91ff" italic="true" underline="true" />
+  <style name="def:note"	foreground="#eeeeee" background="#ff44cc" bold="true" />
+  <style name="def:error"	background="#ff2f6a" bold="true" />
+  <style name="def:escape"	foreground="#9e91ff" />
+  <style name="def:shebang"	foreground="#00c99b" bold="true" />
+  <style name="def:doc-comment-element"	italic="true" />
+  <style name="def:identifier"	foreground="#00c900" bold="true" />
+  <style name="def:specials"	foreground="#eeeeee" background="#ff79d9" />
+  <style name="def:variable"	foreground="#009cff" />
+  <style name="def:boolean"	foreground="#ff44cc" bold="true" />
+  <style name="def:constant"	foreground="#fce94f" />
+  <style name="def:special-constant"	foreground="#ff44cc" bold="true" />
+  <style name="ruby:comment"	foreground="#ff79d9" />
+  <style name="ruby:attribute-definition"	foreground="#eeeeee" bold="true" />
+  <style name="ruby:module-handler"	foreground="#eeeeee" bold="true" />
+  <style name="ruby:builtin"	foreground="#fce94f" bold="true" />
+  <style name="ruby:special-variable"	foreground="#ff44cc" bold="true" />
+  <style name="ruby:predefined-variable"	foreground="#00d8ff" bold="true" />
+  <style name="ruby:symbol"	foreground="#009cff" />
+  <style name="ruby:regex"	foreground="#ff44cc" bold="true" />
+  <style name="ruby:constant"	foreground="#fce94f" />
+  <style name="diff:added-line"	foreground="#96ff00" />
+  <style name="diff:removed-line"	foreground="#ff79d9" />
+  <style name="diff:changed-line"	foreground="#ff9900" />
+  <style name="diff:special-case"	foreground="#96ff00" />
+  <style name="diff:location"	foreground="#ff9900" bold="true" />
+</style-scheme>
